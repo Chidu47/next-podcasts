@@ -5,6 +5,7 @@ import React from "react";
 
 import PodcastCard from "@/components/PodcastCard";
 import { podcastData } from "@/constants";
+import { Id } from "@/convex/_generated/dataModel";
 
 const Home = () => {
   const trendingPodcasts = useQuery(api.podcast.getAllPodcasts);
@@ -36,7 +37,7 @@ const Home = () => {
                   imgUrl={imgURL!}
                   title={title}
                   description={description}
-                  podcastId={id}
+                  podCastId={id.toString() as Id<"podcasts">}
                 />
               );
             })}

@@ -57,7 +57,7 @@ const CreatePodcast = () => {
   const [audioUrl, setAudioUrl] = useState("");
   const [audioDuration, setAudioDuration] = useState(0);
 
-  const [voiceType, setVoiceType] = useState<string | null>(null);
+  const [voiceType, setVoiceType] = useState<any>(null);
   const [voicePrompt, setVoicePrompt] = useState("");
 
   const [isSubmitting, setIsSubmitting] = useState(false);

@@ -5,6 +5,7 @@ import PodcastCard from "@/components/PodcastCard";
 import SearchBar from "@/components/SearchBar";
 import { podcastData as data } from "@/constants";
 import { api } from "@/convex/_generated/api";
+import { Id } from "@/convex/_generated/dataModel";
 
 import { useQuery } from "convex/react";
 import React from "react";
@@ -54,7 +55,7 @@ const Discover = ({
                       imgUrl={imgURL!}
                       title={title}
                       description={description}
-                      podCastId={id}
+                      podCastId={id.toString() as Id<"podcasts">}
                     />
                   );
                 })}

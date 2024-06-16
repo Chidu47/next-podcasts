@@ -48,10 +48,24 @@ const PodcastDetails = ({
         </figure>
       </div>
       <PodcastDetailPlayer
-        isOwner={isOwner!}
-        podcastId={podcastId}
+        isOwner={isOwner}
+        // podcastId={podcastId}
         //  podcastId={podcast?._id}
         // {...podcast}
+
+        podcastTitle="Javascript Jungle Podcast"
+        author="Jeo Rogan"
+        authorImageUrl="https://lovely-flamingo-139.convex.cloud/api/storage/221ee4bd-435f-42c3-8e98-4a001e0d806e"
+        authorId="asdasdfdsa"
+        audioUrl={
+          "https://traffic.megaphone.fm/GLT2855677705.mp3?updated=1718290553"
+        }
+        imageUrl="https://lovely-flamingo-139.convex.cloud/api/storage/221ee4bd-435f-42c3-8e98-4a001e0d806e"
+        audioStorageId={"asdasdfdsa" as Id<"_storage">}
+        imageStorageId={
+          "221ee4bd-435f-42c3-8e98-4a001e0d806e" as Id<"_storage">
+        }
+        podcastId={"sdd" as Id<"podcasts">}
       />
 
       <p className="text-white-1 text-16 pb-8 pt-[45px] font-medium max-md:text-center">
@@ -68,9 +82,9 @@ const PodcastDetails = ({
           <p className="text-16 font-medium text-white-2 gap-2">
             {/* {podcast?.voicePrompt} */}
             Introduction: Welcome to JavaScript Jungle, your go-to podcast for
-            all things JavaScript! In today's episode, we're diving deep into
-            the fascinating world of JavaScript and exploring some of the most
-            interesting aspects of this powerful programming language.
+            all things JavaScript! In today&apos;s episode, we&apos;re diving
+            deep into the fascinating world of JavaScript and exploring some of
+            the most interesting aspects of this powerful programming language.
           </p>
         </div>
         <div className="flex flex-col gap-4">
@@ -78,7 +92,7 @@ const PodcastDetails = ({
           <p className="text-16 font-medium text-white-2 gap-2">
             {/* {podcast?.imagePrompt} */}
             Welcome to JavaScript Jungle, your go-to podcast for all things
-            JavaScript! In today's episode, we're diving deep into the
+            JavaScript! In today&apos;s episode, we&apos;re diving deep into the
             fascinating world of JavaScript and exploring some of the most
             interesting aspects of this powerful programming language.
           </p>
@@ -96,7 +110,7 @@ const PodcastDetails = ({
                   imgUrl={imgURL!}
                   title={title}
                   description={description}
-                  podcastId={id}
+                  podCastId={id.toString() as Id<"podcasts">}
                 />
               );
             })}
