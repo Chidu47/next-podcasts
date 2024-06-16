@@ -10,7 +10,7 @@ import React from "react";
 import { Button } from "./ui/button";
 import { useAudio } from "@/providers/AudioProvider";
 
-const LeftSideBar = () => {
+const LeftNav = () => {
   const pathname = usePathname();
   const router = useRouter();
   const { signOut } = useClerk();
@@ -75,4 +75,4 @@ const LeftSideBar = () => {
   );
 };
 
-export default LeftSideBar;
+export default LeftNav;
