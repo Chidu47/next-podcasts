@@ -1,3 +1,4 @@
+"use client";
 import { ConvexError, v } from "convex/values";
 
 import { internalMutation, query } from "./_generated/server";
@@ -10,9 +11,9 @@ export const getUserById = query({
       .filter((q) => q.eq(q.field("clerkId"), args.clerkId))
       .unique();
 
-    if (!user) {
-      throw new ConvexError("User not found");
-    }
+    // if (!user) {
+    //   throw new ConvexError("User not found");
+    // }
 
     return user;
   },

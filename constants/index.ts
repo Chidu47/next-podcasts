@@ -101,3 +101,27 @@ export const podcastData = [
       "https://lovely-flamingo-139.convex.cloud/api/storage/221ee4bd-435f-42c3-8e98-4a001e0d806e",
   },
 ];
+
+export const profileSlides = [
+  {
+    id: 1,
+    title: "Joe Rogan",
+    description: "A long form, in-depth conversation",
+    imgURL:
+      "https://lovely-flamingo-139.convex.cloud/api/storage/221ee4bd-435f-42c3-8e98-4a001e0d806e",
+  },
+  {
+    id: 2,
+    title: "The Futur",
+    description: "This is how the news should sound",
+    imgURL:
+      "https://lovely-flamingo-139.convex.cloud/api/storage/16fbf9bd-d800-42bc-ac95-d5a586447bf6",
+  },
+  {
+    id: 3,
+    title: "Waveform",
+    description: "Join Michelle Obama in conversation",
+    imgURL:
+      "https://lovely-flamingo-139.convex.cloud/api/storage/60f0c1d9-f2ac-4a96-9178-f01d78fa3733",
+  },
+];

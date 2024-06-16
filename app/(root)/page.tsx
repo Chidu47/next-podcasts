@@ -4,12 +4,13 @@ import { useQuery } from "convex/react";
 import React from "react";
 
 import PodcastCard from "@/components/PodcastCard";
+import { podcastData } from "@/constants";
 
 const Home = () => {
   const trendingPodcasts = useQuery(api.podcast.getAllPodcasts);
   console.log(trendingPodcasts);
   return (
-    <div className="mt-9 flex flex-col gap-9">
+    <div className="mt-9 flex flex-col gap-9 md:overflow-hidden ">
       <section className="flex flex-col gap-5">
         <h1 className="text-20 font-bold text-white-1">Trending Podcasts</h1>
         <div className="podcast_grid">
@@ -18,17 +19,27 @@ const Home = () => {
               return (
                 <PodcastCard
                   key={index}
-                  imgURL={imageUrl!}
+                  imgUrl={imageUrl!}
                   title={podcastTitle}
                   description={podcastDescription}
-                  podcastId={_id}
+                  podCastId={_id}
                 />
               );
             }
           )}
-          {trendingPodcasts?.length === 0 && (
-            <h1 className="text-20 font-bold text-white-1">No Podcasts</h1>
-          )}
+
+          {trendingPodcasts?.length === 0 &&
+            podcastData.map(({ id, imgURL, title, description }, index) => {
+              return (
+                <PodcastCard
+                  key={index}
+                  imgUrl={imgURL!}
+                  title={title}
+                  description={description}
+                  podcastId={id}
+                />
+              );
+            })}
         </div>
       </section>
     </div>

@@ -10,6 +10,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "majestic-wildebeest-210.convex.cloud",
       },
+      {
+        protocol: "https",
+        hostname: "cdn.pixabay.com",
+      },
     ],
   },
 };
